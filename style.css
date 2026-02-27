@@ -3,3 +3,65 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --cyan-600: #4D96A9;
+  --cyan-300: #8FE3F9;
+  --purple-600: #855FB1;
+  --purple-300: #D9B8FF;
+  --slate-900: #28283D;
+  --slate-600: #87879D;
+  --slate-300: #D1D1DF;
+  --white: #FAFAFA;
+
+  --spacing-1400: 7rem;   /* 112px */
+  --spacing-1000: 5rem;   /* 80px */
+  --spacing-900: 4.5rem;  /* 72px */
+  --spacing-800: 4rem;    /* 64px */
+  --spacing-700: 3.5rem;  /* 56px */
+  --spacing-500: 2.5rem;  /* 40px */
+  --spacing-400: 2rem;    /* 32px */
+  --spacing-300: 1.5rem;  /* 24px */
+  --spacing-200: 1rem;    /* 16px */
+  --spacing-100: 0.5rem;  /* 8px */
+  --spacing-50: 0.25rem;  /* 4px */
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-style: normal;
+  color: var(--slate-900);
+}
+
+.text-preset-1 {
+  font-size: 4rem; /* 64px */
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.text-preset-2 {
+  font-size: 2.5rem; /* 40px */
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.text-preset-3 {
+  font-size: 1rem; /* 16px */
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--cyan-600);
+}
+
+.text-preset-4 {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.text-preset-5 {
+  font-size: 1rem; /* 16px */
+  font-weight: 900;
+  line-height: 1.5;
+}
