@@ -65,3 +65,87 @@ body {
   font-weight: 900;
   line-height: 1.5;
 }
+
+/* Classes for text colors */
+.text-slate-900 {
+  color: var(--slate-900);
+}
+
+.text-slate-600 {
+  color: var(--slate-600);
+}
+
+body {
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* AINDA NAO USADO - OLHAR DEPOIS */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-1000);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-800);
+  gap: var(--spacing-400);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-400);
+
+  text-align: center;
+  max-width: 28rem;
+}
+
+.hero-content p {
+  margin: 0 var(--spacing-200);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-200);
+}
+
+.link {
+  padding: var(--spacing-200) var(--spacing-500);
+  border-radius: 29px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+
+  color: var(--white);
+}
+
+.hero-download {
+  background-color: var(--cyan-600);
+}
+.hero-download:hover {
+  background-color: #71C0D4;
+}
+
+.version-download {
+  color: var(--cyan-300);
+}
+
+.hero-what {
+  background-color: var(--purple-600);
+}
+
+.hero-what:hover {
+  background-color: #B18BDD;
+}
