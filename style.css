@@ -19,6 +19,7 @@
   --spacing-900: 4.5rem;  /* 72px */
   --spacing-800: 4rem;    /* 64px */
   --spacing-700: 3.5rem;  /* 56px */
+  --spacing-600: 3rem;    /* 48px */
   --spacing-500: 2.5rem;  /* 40px */
   --spacing-400: 2rem;    /* 32px */
   --spacing-300: 1.5rem;  /* 24px */
@@ -66,6 +67,38 @@ body {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  .text-preset-1 {
+    font-size: 3rem; /* 48px */
+  }
+
+  .text-preset-2 {
+    font-size: 2.25rem; /* 36px */
+  }
+
+  .text-preset-3 {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .text-preset-4 {
+    font-size: 1rem; /* 16px */
+  }
+}
+
+@media (max-width: 375px) {
+  .text-preset-1 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  .text-preset-2 {
+    font-size: 2rem; /* 32px */
+  }
+
+  .text-preset-3 {
+    font-size: 0.75rem; /* 12px */
+  }
+}
+
 /* Classes for text colors */
 .text-slate-900 {
   color: var(--slate-900);
@@ -83,23 +116,40 @@ a {
   text-decoration: none;
 }
 
-/* AINDA NAO USADO - OLHAR DEPOIS */
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 header{
   display: flex;
   justify-content: center;
   margin-top: var(--spacing-1000);
 }
 
+
+/***** START - CSS for hero section *****/
 .hero {
   display: flex;
-  justify-content: space-between;
-  padding: var(--spacing-800);
-  gap: var(--spacing-400);
+  justify-content: center;
+  align-items: center;
+  
+  position: relative;
+  overflow: hidden;
+
+  padding: var(--spacing-800) 0px;
+}
+
+.left-image,
+.right-image {
+  position: absolute;
+}
+
+.left-image {
+  left: -30px;
+}
+
+.right-image {
+  right: -30px;
+}
+
+.hero img {
+  width: 100%;
 }
 
 .hero-content {
@@ -131,21 +181,194 @@ header{
   color: var(--white);
 }
 
-.hero-download {
+@media (min-width: 1920px) {
+  .hero {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-900);
+  }
+
+  .hero-content {
+    padding: 0 var(--spacing-900);
+  }
+
+  .left-image {
+    position: initial;    
+  }
+
+  .right-image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-top: var(--spacing-600);
+  }
+
+  .hero-content {
+    gap: var(--spacing-300);
+  }
+}
+
+@media (max-width: 450px) {
+  .hero {
+    gap: var(--spacing-600);
+    padding: var(--spacing-800) 0px var(--spacing-400);
+  }
+  
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+/***** END - CSS for hero section *****/
+
+/***** START - CSS for buttons *****/
+.cyan-btn {
   background-color: var(--cyan-600);
 }
-.hero-download:hover {
+.cyan-btn:hover {
   background-color: #71C0D4;
 }
 
-.version-download {
+.cyan-btn .version-download {
   color: var(--cyan-300);
 }
 
-.hero-what {
+.purple-btn {
   background-color: var(--purple-600);
 }
 
-.hero-what:hover {
+.purple-btn:hover {
   background-color: #B18BDD;
+}
+
+.purple-btn .version-download {
+  color: var(--purple-300);
+}
+/***** END - CSS for buttons *****/
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divider hr {
+  height: 80px;
+  background-color: var(--slate-300);
+  border: 0;
+  width: 1px;
+}
+
+.circle {
+  color: var(--slate-600);
+  border: 1px solid var(--slate-300);
+  border-radius: 100%;
+  padding: 1rem 1.1875rem;
+  line-height: normal;
+}
+
+
+/***** START - CSS for main content *****/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  margin: var(--spacing-700) auto var(--spacing-900);
+  padding: 0 var(--spacing-400);
+}
+
+.main-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-400);
+
+  margin: var(--spacing-800) 0;
+}
+
+.main-images img {
+  border-radius: 8px;
+  max-width: 256px;
+  max-height: 256px;
+  object-fit: cover;
+}
+
+.main-footer {
+  max-width: 34rem; /* 544px */
+}
+
+.main-footer h2 {
+  margin: var(--spacing-200) 0 var(--spacing-400);
+  padding: 0 var(--spacing-600);
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: var(--spacing-700) auto var(--spacing-800);
+  }
+
+  .main-images {
+    gap: var(--spacing-300);
+  }
+
+  .main-images img {
+    max-width: 152px;
+    max-height: 160px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-footer h2 {
+    margin: var(--spacing-200) 0 var(--spacing-400);
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    margin: var(--spacing-400) auto var(--spacing-800);
+  }
+
+  .main-images {
+    gap: var(--spacing-200);
+  }
+
+  .main-images img {
+    max-width: 147px;
+    max-height: 144px;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    padding: 0 var(--spacing-400);
+  }
+}
+
+/***** END - CSS for main content *****/
+
+/***** START - CSS for footer *****/
+
+footer {
+  border: 1px solid red;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/desktop/image-footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: blue;
 }

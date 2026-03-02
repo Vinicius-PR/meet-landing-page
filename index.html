@@ -20,8 +20,8 @@
   </header>
 
   <section class="hero">
-    <picture>
-      <source media="(min-width: 768px)" srcset="./assets/desktop/image-hero-left.png">
+    <picture class="left-image">
+      <source media="(min-width: 1200px)" srcset="./assets/desktop/image-hero-left.png">
       <img src="./assets/tablet/image-hero.png" alt="Hero image left">
     </picture>
 
@@ -32,22 +32,24 @@
       </p>
 
       <div class="hero-buttons">
-        <a href="" class="text-preset-5 link hero-download">
+        <a href="" class="text-preset-5 link cyan-btn">
           Download <span class="version-download">v1.3</span>
         </a>
-        <a href="" class="text-preset-5 link hero-what">
+        <a href="" class="text-preset-5 link purple-btn">
           What is it?
         </a>
       </div>
     </div>
 
-    <img src="./assets/desktop/image-hero-right.png" alt="Hero image right">
+    <picture class="right-image">
+      <img src="./assets/desktop/image-hero-right.png" alt="Hero image right">
+    </picture>
   </section>
 
   <main>
     <div class="divider">
       <hr/>
-      <span class="circle">01</span>
+      <span class="circle text-preset-5">01</span>
     </div>
 
     <div class="main-images">
@@ -59,9 +61,9 @@
 
     <div class="main-footer">
       
-      <h3>Built for modern use</h3>
-      <h2>Smarter meetings, all in one place</h2>
-      <p>
+      <h3 class="text-preset-3">Built for modern use</h3>
+      <h2 class="text-preset-2 text-slate-900">Smarter meetings, all in one place</h2>
+      <p class="text-preset-4 text-slate-600">
         Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.
       </p>
 
@@ -69,16 +71,16 @@
     
   </main>
 
-  <footer>
-    <div class="divider">
-      <hr/>
-      <span class="circle">02</span>
-    </div>
+   <div class="divider">
+    <hr/>
+    <span class="circle">02</span>
+  </div>
 
+  <footer>
     <div class="footer-content">
       <h2>Experience more together</h2>
       <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
-      <a href="" class="text-preset-5 link hero-download">
+      <a href="" class="text-preset-5 link purple-btn">
         Download <span class="version-download">v1.3</span>
       </a>
     </div>
