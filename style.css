@@ -7,6 +7,7 @@
 :root {
   --cyan-600: #4D96A9;
   --cyan-300: #8FE3F9;
+  --cyan-300: rgb(143, 227, 249);
   --purple-600: #855FB1;
   --purple-300: #D9B8FF;
   --slate-900: #28283D;
@@ -32,6 +33,7 @@ body {
   font-family: "Red Hat Display", sans-serif;
   font-style: normal;
   color: var(--slate-900);
+  background-color: var(--white);
 }
 
 .text-preset-1 {
@@ -106,10 +108,6 @@ body {
 
 .text-slate-600 {
   color: var(--slate-600);
-}
-
-body {
-  background-color: var(--white);
 }
 
 a {
@@ -276,6 +274,7 @@ header{
   border-radius: 100%;
   padding: 1rem 1.1875rem;
   line-height: normal;
+  background-color: var(--white);
 }
 
 
@@ -363,12 +362,57 @@ main {
 /***** START - CSS for footer *****/
 
 footer {
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-1000);
+
+  padding: var(--spacing-1400) var(--spacing-400);
+  margin-top: -24px;
+
+
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(rgba(27, 126, 151, 0.822), rgba(28, 113, 134, 0.822)),
     url(./assets/desktop/image-footer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: blue;
+  color: var(--white);
+}
+
+footer h2 {
+  flex-basis: 22.1875rem; /* 355px */
+}
+
+footer p {
+  flex-basis: 22.1875rem; /* 355px */
+}
+
+@media (max-width: 1150px) {
+  footer {
+    padding: var(--spacing-800) var(--spacing-400);
+    gap: var(--spacing-300);
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    background:
+    linear-gradient(rgba(27, 126, 151, 0.822), rgba(28, 113, 134, 0.822)),
+    url(./assets/tablet/image-footer.jpg);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 375px) {
+  footer {
+    background:
+    linear-gradient(rgba(27, 126, 151, 0.822), rgba(28, 113, 134, 0.822)),
+    url(./assets/mobile/image-footer.jpg);
+    background-size: cover;
+    background-position: center;
+  }
 }
