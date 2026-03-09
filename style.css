@@ -316,6 +316,10 @@ main {
   padding: 0 var(--spacing-600);
 }
 
+.main-footer p {
+  line-height: 1.5;
+}
+
 @media (max-width: 768px) {
   main {
     margin: var(--spacing-700) auto var(--spacing-800);
